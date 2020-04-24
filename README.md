@@ -64,7 +64,7 @@ Just add this into your webpack.config.js file in the module.rules array. :
 ```
 
 ## TODO
-[] Publish to npm
-[] Document export settings for Adobe Animate
-[] Add example project
-[] Publish the companion runtime library loader
+[ ] Publish to npm
+[ ] Document export settings for Adobe Animate
+[ ] Add example project
+[ ] Publish the companion runtime library loader

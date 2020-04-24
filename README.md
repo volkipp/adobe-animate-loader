@@ -1,8 +1,8 @@
-# CreateJS Webpack Loader
-This webpack loader will load javascript exported directly from Adobe Animate, and convert it into a format consumable by webpack. It will also normalize output so that you don't need to know the name of the root timeline / filename when exported. This makes it simpler to create loader libraries without knowing the name of the root timeline beforehand. You can just create a new instance through `new library.Root()` and you're off to the races. So any animation you simply need to know the path to it:
+# Adobe Animate Webpack Loader
+This webpack loader will load javascript exported directly from Adobe Animate, and convert it into a commonjs module consumable by webpack. It will also normalize output so that you don't need to know the name of the root timeline / filename when exported. This makes it simpler to create asset (runtime) loader libraries without knowing the name of the root timeline beforehand. You can just create a new instance through `new library.Root()` and you're off to the races. So any animation you simply need to know the path to it:
 ```
 const createjs = require('createjs');
-const animation = require('./assets/animations/my-create-js-project.js');
+const project = require('./assets/animations/my-create-js-project.js');
 const library = animation.makeDefinition(createjs);
 // TODO: add directions for loading the library assets as a next step
 const movie = new library.Root();
@@ -67,4 +67,4 @@ Just add this into your webpack.config.js file in the module.rules array. :
 - [ ] Publish to npm
 - [ ] Document export settings for Adobe Animate
 - [ ] Add example project
-- [ ] Publish the companion runtime library loader
+- [ ] Publish the companion runtime library asset loader

@@ -44,9 +44,9 @@ Just add this to your webpack.config.js file:
 Now CreateJS animations are ready to be packed!
 
 Next, install the adobe-animate-loader into your webpack project 
-`yarn add -D adobe-animate-loader`
+`yarn add -D volkipp/adobe-animate-loader`
 or if you enjoy npm: 
-`npm i adobe-animate-loader --save-dev`
+`npm i volkipp/adobe-animate-loader --save-dev`
 
 You'll need to dedicate a folder to only put your CreateJS animations. In this example, any .js file in src/assets/animation will be loaded through the adobe-animate-loader. 
 
@@ -64,7 +64,7 @@ Just add this into your webpack.config.js file in the module.rules array. :
 ```
 
 ## TODO
-[ ] Publish to npm
-[ ] Document export settings for Adobe Animate
-[ ] Add example project
-[ ] Publish the companion runtime library loader
+- [ ] Publish to npm
+- [ ] Document export settings for Adobe Animate
+- [ ] Add example project
+- [ ] Publish the companion runtime library loader

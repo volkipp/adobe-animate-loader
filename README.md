@@ -58,7 +58,7 @@ Just add this into your webpack.config.js file in the module.rules array. :
             path.resolve(__dirname, "src/assets/animation")
         ],
         use: [
-            { loader: 'adobe-animate-loader') }
+            { loader: 'adobe-animate-loader' }
         ]
     }
 ```

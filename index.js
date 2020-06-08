@@ -25,7 +25,7 @@ module.exports = (source) => {
     output = output.replace(extractedProperties, " Object.assign({}, properties)");
     
     // Pattern to discover the stage root name
-    const exportRootPattern = /^\/\/ stage content:\n\(lib\.([^ =]*)/m;    
+    const exportRootPattern = /\/\/ stage content:\s*\(lib\.([^ =]*)/m;    
     
     // The name of the root movie
     const exportRootName = exportRootPattern.exec(source)[1];

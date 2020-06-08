@@ -1,6 +1,6 @@
 {
   "name": "adobe-animate-loader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "description": "Webpack loader to directly import Adobe Animate javascript files as modules"

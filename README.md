@@ -17,6 +17,9 @@ First, you'll need to make sure you have createJS as a dependency of your projec
 
 `yarn add createjs`
 
+Because of a bug in the createjs package, you will also need the imports-loader and exports-loader as dev dependencies:
+`yarn add -D imports-loader exports-loader`
+
 You'll need to make some adjustments to your webpack.config.js in order to let webpack recognize the modules, as they don't work out of the box (this is a known issue with this project).
 
 Just add this to your webpack.config.js file:

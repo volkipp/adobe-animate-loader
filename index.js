@@ -6,7 +6,7 @@ module.exports = (source) => {
     const endPattern = /}\)\(createjs(.|\n)*AdobeAn;/m;
     
     // Pattern match for finding files in the manifest
-    const manifestFilePattern = /{[\n\s]*src:((['"])([\w/.%\-]*)\2)/gm;
+    const manifestFilePattern = /{\s*src:\s*((['"])([\w/.%\-]*)(?:\?\d*)\2)/gm;
 
     // Replace all the manifest URLS with require() calls to pack the image assets.
     let output = source.replace(manifestFilePattern, (match, matchWithQuote, q, filename) => {

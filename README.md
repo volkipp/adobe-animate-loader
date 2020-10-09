@@ -24,23 +24,31 @@ You'll need to make some adjustments to your webpack.config.js in order to let w
 
 Just add this to your webpack.config.js file:
 ```
-        resolve: {
-            alias: {
-                createjs: 'createjs/builds/1.0.0/createjs.js'
-            }
-        },
-        module: {
-            rules: [
-                {
-                    test: /node_modules[/\\]createjs/,
-                    loaders: [
-                        'imports-loader?this=>window',
-                        'exports-loader?window.createjs'
-                    ]
-                }
-            ]
+    resolve: {
+        alias: {
+            createjs: 'createjs/builds/1.0.0/createjs.js'
         }
-
+    },
+    module: {
+        rules: [
+            {
+                test: /node_modules[/\\]createjs/,
+                use: [
+                    {
+                        loader: 'imports-loader',
+                        options: { wrapper: 'window' }
+                    },
+                    {
+                        loader: 'exports-loader',
+                        options: {
+                            type: 'commonjs',
+                            exports: 'single createjs',
+                        }
+                    },
+                ]
+            }
+        ]
+    }
 
 ```
 

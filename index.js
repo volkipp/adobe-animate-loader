@@ -1,9 +1,9 @@
 module.exports = (source) => {
     // Pattern match for start of file
-    const startPattern = /^\(function.*\n/m;
+    const startPattern = /^\(function.*\r?\n/m;
 
     // Pattern for end of file
-    const endPattern = /}\)\(createjs(.|\n)*AdobeAn;/m;
+    const endPattern = /}\)\(createjs(.|\r?\n)*AdobeAn;/m;
     
     // Pattern match for finding files in the manifest
     const manifestFilePattern = /{\s*src:\s*((['"])([\w/.%\-]*)(?:\?\d*)\2)/gm;
